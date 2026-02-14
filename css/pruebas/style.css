@@ -1,0 +1,378 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* ================= BODY ================= */
+body {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  background: #0d0f12;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ================= HEADER ================= */
+.header {
+  background: #0d0f12;
+  border-bottom: 1px solid #1e2228;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.logo {
+  height: 72px;
+  width: auto;
+}
+
+/* ================= NAV ================= */
+.nav a {
+  margin-left: 26px;
+  text-decoration: none;
+  color: #f5f5f5;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.nav a:hover {
+  color: #cbd5e1;
+}
+
+.btn-nav {
+  padding: 8px 18px;
+  background: #2a2f36;
+  color: #ffffff;
+  border-radius: 6px;
+  transition: background 0.25s ease;
+}
+
+.btn-nav:hover {
+  background: #3a4452;
+}
+
+/* ================= HERO ================= */
+.hero-video {
+  position: relative;
+  height: 440px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* VIDEO WRAPPER */
+.hero-video-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* VIDEO */
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* OSCURECIDO */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 15, 18, 0.65);
+  z-index: 2;
+}
+
+/* DEGRADADO INFERIOR SUAVE */
+.hero-video::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to bottom, rgba(13,15,18,0) 0%, #0d0f12 100%);
+  z-index: 2;
+}
+
+/* CONTENIDO HERO */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 680px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 2.1rem;
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+
+.hero-content p {
+  max-width: 560px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-top: 14px;
+  color: #cbd5e1;
+}
+
+/* ================= BOTONES ================= */
+.hero-buttons {
+  margin-top: 26px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+a, button {
+  transition: all 0.25s ease;
+}
+
+/* BOTÓN PRINCIPAL */
+.btn-primary {
+  display: inline-block;
+  background: #f5f5f5;
+  color: #0d0f12;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  min-width: 170px;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: #e5e7eb;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+/* BOTÓN SECUNDARIO */
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid #3a4452;
+  color: #f5f5f5;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  min-width: 170px;
+  text-align: center;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+}
+
+/* ================= SERVICES ================= */
+.services {
+  padding: 90px 0;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 1.85rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+.service-card {
+  background: #161a20;
+  padding: 36px;
+  border-radius: 14px;
+  border: 1px solid #1e2228;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+.service-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #b5b7ba;
+}
+
+/* ================= WHY US ================= */
+.why-us {
+  padding: 90px 0;
+}
+
+.why-us h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 1.85rem;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+.why-item {
+  background: #161a20;
+  padding: 36px;
+  border-radius: 14px;
+  border: 1px solid #1e2228;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+.why-item h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.why-item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #b5b7ba;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  text-align: center;
+  padding: 32px 0;
+  border-top: 1px solid #1e2228;
+  font-size: 0.85rem;
+  color: #b5b7ba;
+}
+
+/* ================= SEPARACIÓN SUAVE ENTRE SECCIONES ================= */
+section {
+  position: relative;
+}
+
+section:not(.hero-video)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 1px;
+  background: rgba(255,255,255,0.05);
+}
+
+/* ================= ANIMACIÓN DE ENTRADA ================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero */
+.hero-content {
+  animation: fadeUp 0.9s ease forwards;
+}
+
+/* Secciones */
+.services,
+.why-us {
+  opacity: 0;
+  animation: fadeUp 0.9s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* ================= DETALLE TECH SUTIL ================= */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= GLOW TECNOLÓGICO SUTIL ================= */
+
+.hero-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(255,255,255,0.06), transparent 60%);
+  animation: subtleGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes subtleGlow {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+/* ================= BORDE TECH ELEGANTE ================= */
+
+.service-card::before,
+.why-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
+  pointer-events: none;
+}
+
+.service-card:hover::before,
+.why-item:hover::before {
+  border-color: rgba(255,255,255,0.15);
+}
