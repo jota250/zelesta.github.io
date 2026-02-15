@@ -536,3 +536,18 @@ body {
   color: #1AA0D8;
   text-decoration: underline;
 }
+
+.footer-legal {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.footer-legal a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  text-decoration: underline;
+}
