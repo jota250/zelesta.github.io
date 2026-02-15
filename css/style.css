@@ -215,6 +215,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* ================= ICONOS ================= */
 .service-icon {
   width: 56px;
   height: 56px;
@@ -234,14 +235,12 @@ body {
   stroke-width: 1.9;
 }
 
-/* Hover elegante */
 .service-card:hover .service-icon {
   background: #1AA0D8;
   color: #ffffff;
   transform: scale(1.08);
   box-shadow: 0 8px 22px rgba(26, 160, 216, 0.35);
 }
-
 
 .service-card h3 {
   font-size: 1.25rem;
@@ -263,6 +262,43 @@ body {
   line-height: 1.7;
   color: #cbd5e1;
   margin-top: 16px;
+}
+
+/* ================= LISTAS SERVICIOS ================= */
+.service-list {
+  list-style: none;
+  margin-top: 18px;
+  padding: 0;
+}
+
+.service-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  text-align: left;
+  transition: all 0.35s ease;
+}
+
+.service-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #1AA0D8;
+  font-weight: 700;
+  transition: transform 0.35s ease;
+}
+
+/* Microanimación */
+.service-card:hover .service-list li {
+  transform: translateX(4px);
+  color: #ffffff;
+}
+
+.service-card:hover .service-list li::before {
+  transform: translateX(2px);
 }
 
 .service-card:hover {
@@ -336,4 +372,52 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* ====== WHY US: mismo estilo que servicios ====== */
+
+.why-item h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.why-item h3::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 2px;
+  background: #1AA0D8;
+  margin: 10px auto 0;
+}
+
+.why-item p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* ====== WHY US: mismo hover que servicios ====== */
+
+.why-item {
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-item:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 0 2px #1AA0D8,
+    0 16px 36px rgba(0,0,0,0.45);
+}
+
+/* ====== WHY US: título igual que Servicios ====== */
+
+.why-us h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 1.85rem;
 }
