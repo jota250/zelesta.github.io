@@ -48,7 +48,7 @@
       </p>
 
       <div class="hero-buttons">
-        <a href="#contacto" class="btn-primary">Solicitar asesoría</a>
+        <a href="#asesoria" class="btn-primary">Solicitar asesoría</a>
         <a href="#contacto" class="btn-secondary">Contactar</a>
       </div>
     </div>
@@ -183,6 +183,51 @@
       </div>
     </div>
   </section>
+<!-- SOLICITAR ASESORÍA -->
+<section id="asesoria" class="assistance">
+  <div class="container">
+    <h2>Solicitar asesoría informática</h2>
+    <p class="assistance-intro">
+      Cuéntanos brevemente tu necesidad y te responderemos lo antes posible.
+    </p>
+
+    <form class="assistance-form" 
+      action="https://formspree.io/f/mykdwpqv"
+      method="POST">
+
+  <input type="hidden" name="_next" value="jota250.github.io/zelesta.github.io//gracias.html">
+
+  <div class="form-group">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="tipo">¿Eres empresa o particular?</label>
+    <select id="tipo" name="tipo">
+      <option>Empresa</option>
+      <option>Particular</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="mensaje">Describe brevemente tu consulta</label>
+    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+  </div>
+
+  <button type="submit" class="btn-primary">
+    Enviar solicitud
+  </button>
+
+</form>
+
+  </div>
+</section>
 
   <!-- CONTACTO -->
   <section id="contacto" class="contact">

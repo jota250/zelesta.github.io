@@ -421,3 +421,78 @@ body {
   margin-bottom: 50px;
   font-size: 1.85rem;
 }
+
+/* ================= ASESORÍA ================= */
+
+.assistance {
+  padding: 90px 0;
+}
+
+.assistance h2 {
+  text-align: center;
+  font-size: 1.85rem;
+  margin-bottom: 16px;
+}
+
+.assistance-intro {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 40px;
+  color: #cbd5e1;
+}
+
+.assistance-form {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #161a20;
+  padding: 36px;
+  border-radius: 14px;
+  border: 1px solid #1e2228;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  background: #0d0f12;
+  border: 1px solid #1e2228;
+  border-radius: 6px;
+  color: #ffffff;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #1AA0D8;
+}
+
+/* ===== Página de agradecimiento ===== */
+
+.thank-you {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.thank-you h2 {
+  margin-bottom: 20px;
+}
+
+.thank-you p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
