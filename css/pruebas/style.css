@@ -70,7 +70,8 @@ body {
 /* ================= HERO ================= */
 .hero-video {
   position: relative;
-  height: 440px;
+  min-height: 70vh;
+  max-height: 520px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -135,6 +136,15 @@ body {
   color: #cbd5e1;
 }
 
+/* ================= HERO BUTTONS ================= */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 /* ================= BOTONES ================= */
 .btn-primary {
   display: inline-block;
@@ -175,16 +185,13 @@ body {
   background: rgba(26,160,216,0.08);
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow:
-    0 0 0 2px #1AA0D8;
+  box-shadow: 0 0 0 2px #1AA0D8;
 }
 
 /* ================= SERVICES ================= */
 .services {
   padding: 90px 0;
-  opacity: 0;
   animation: fadeUp 0.9s ease forwards;
-  animation-delay: 0.2s;
 }
 
 .services h2 {
@@ -200,7 +207,6 @@ body {
 }
 
 .service-card {
-  position: relative;
   background: #161a20;
   padding: 36px;
   border-radius: 14px;
@@ -209,16 +215,39 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 🔹 TÍTULO SERVICIO */
+/* ================= ICONOS ================= */
+.service-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1AA0D8;
+  background: rgba(26, 160, 216, 0.12);
+  border-radius: 50%;
+  transition: all 0.35s ease;
+}
+
+.service-icon svg {
+  width: 26px;
+  height: 26px;
+  stroke-width: 1.9;
+}
+
+.service-card:hover .service-icon {
+  background: #1AA0D8;
+  color: #ffffff;
+  transform: scale(1.08);
+  box-shadow: 0 8px 22px rgba(26, 160, 216, 0.35);
+}
+
 .service-card h3 {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 14px;
-  color: #ffffff;
-  position: relative;
 }
 
-/* 🔹 LÍNEA AZUL CORPORATIVA */
 .service-card h3::after {
   content: "";
   display: block;
@@ -226,10 +255,8 @@ body {
   height: 2px;
   background: #1AA0D8;
   margin: 10px auto 0;
-  border-radius: 2px;
 }
 
-/* 🔹 TEXTO SERVICIO */
 .service-card p {
   font-size: 0.95rem;
   line-height: 1.7;
@@ -237,7 +264,31 @@ body {
   margin-top: 16px;
 }
 
-/* 🔵 HOVER CON CONTORNO AZUL */
+/* ================= LISTAS SERVICIOS (SEMÁNTICAS) ================= */
+.service-list {
+  list-style: none;
+  margin-top: 18px;
+  padding: 0;
+}
+
+.service-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  text-align: left;
+}
+
+.service-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #1AA0D8;
+  font-weight: 700;
+}
+
 .service-card:hover {
   transform: translateY(-6px);
   box-shadow:
@@ -245,26 +296,19 @@ body {
     0 16px 36px rgba(0,0,0,0.45);
 }
 
-.service-card:hover h3 {
-  transform: translateY(-2px);
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover p {
-  color: #e5e7eb;
-  transition: color 0.3s ease;
-}
-
 /* ================= WHY US ================= */
 .why-us {
   padding: 90px 0;
-  opacity: 0;
   animation: fadeUp 0.9s ease forwards;
-  animation-delay: 0.2s;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
 }
 
 .why-item {
-  position: relative;
   background: #161a20;
   padding: 36px;
   border-radius: 14px;
@@ -280,8 +324,40 @@ body {
   color: #b5b7ba;
 }
 
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+  }
+
+}
+
 /* ================= ANIMACIÓN ================= */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
