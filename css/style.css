@@ -381,6 +381,21 @@ body {
     margin-left: 0;
     margin-right: 0;
   }
+  /* Corregir alineación del botón Contacto en móvil */
+  .nav .btn-nav {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  /* Fuerza alineación real de todos los botones */
+  .nav a {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .btn-nav {
+    padding-left: 0;
+  }
 
 }
 
