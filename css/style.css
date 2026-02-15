@@ -370,6 +370,18 @@ body {
     font-size: 0.95rem;
   }
 
+  /* Alinear botones del menú en móvil */
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav a {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
 }
 
 @media (max-width: 480px) {
