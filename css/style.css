@@ -583,3 +583,23 @@ body {
     transform: none;
   }
 }
+
+/* ===== Visibilidad según dispositivo (botón Contactar) ===== */
+
+.only-mobile {
+  display: none;
+}
+
+.only-desktop {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .only-desktop {
+    display: none;
+  }
+
+  .only-mobile {
+    display: inline-block;
+  }
+}
