@@ -513,3 +513,26 @@ body {
   margin-bottom: 28px;
   color: #cbd5e1;
 }
+
+/* ===== RGPD ===== */
+
+.rgpd {
+  font-size: 0.85rem;
+}
+
+.rgpd-label {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  line-height: 1.5;
+  color: #cbd5e1;
+}
+
+.rgpd-label input {
+  margin-top: 3px;
+}
+
+.rgpd-label a {
+  color: #1AA0D8;
+  text-decoration: underline;
+}
