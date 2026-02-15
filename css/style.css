@@ -496,3 +496,20 @@ body {
   margin-bottom: 30px;
   font-size: 1.1rem;
 }
+
+/* ===== Mensaje de éxito formulario ===== */
+
+.assistance-success {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.assistance-success h2 {
+  margin-bottom: 16px;
+}
+
+.assistance-success p {
+  margin-bottom: 28px;
+  color: #cbd5e1;
+}
