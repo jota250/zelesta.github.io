@@ -603,3 +603,47 @@ body {
     display: inline-block;
   }
 }
+
+/* --- Mejora visual del texto en los HERO --- */
+
+.hero-content h1 {
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  letter-spacing: -0.5px;
+}
+
+.hero-content p {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content h1 {
+  color: #ffffff;
+  text-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.65),
+    0 10px 40px rgba(0, 0, 0, 0.9);
+  letter-spacing: -0.6px;
+}
+
+.hero-content p {
+  color: #e5e7eb;
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Glow sutil en pantallas grandes */
+@media (min-width: 768px) {
+  .hero-content h1 {
+    text-shadow:
+      0 2px 8px rgba(0, 0, 0, 0.6),
+      0 8px 30px rgba(0, 0, 0, 0.8),
+      0 0 40px rgba(56, 189, 248, 0.25);
+  }
+}
+
+/* === HERO TITLES: MÁS GRANDES SOLO EN ESCRITORIO === */
+
+@media (min-width: 1024px) {
+  .hero-content h1 {
+    font-size: 3.2rem;
+    line-height: 1.1;
+  }
+}
