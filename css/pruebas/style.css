@@ -148,44 +148,59 @@ body {
 /* ================= BOTONES ================= */
 .btn-primary {
   display: inline-block;
-  background: #1AA0D8;
-  color: #ffffff;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
   padding: 14px 28px;
-  border-radius: 8px;
-  text-decoration: none;
+  border-radius: 40px;
   font-weight: 600;
-  min-width: 170px;
-  text-align: center;
-  transition: all 0.25s ease;
+  text-decoration: none;
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+  box-shadow: 0 8px 20px rgba(0, 114, 255, 0.35);
 }
 
+/* Hover: se eleva */
 .btn-primary:hover {
-  background: #1486B4;
-  transform: translateY(-2px);
-  box-shadow:
-    0 0 0 2px #1AA0D8,
-    0 0 18px rgba(26,160,216,0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0, 114, 255, 0.45);
+}
+
+/* Click: se hunde */
+.btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 6px 15px rgba(0, 114, 255, 0.3);
 }
 
 .btn-secondary {
   display: inline-block;
-  background: transparent;
-  border: 2px solid #1AA0D8;
-  color: #1AA0D8;
   padding: 14px 28px;
-  border-radius: 8px;
-  text-decoration: none;
+  border-radius: 40px;              /* MISMA forma */
   font-weight: 600;
-  min-width: 170px;
-  text-align: center;
-  transition: all 0.25s ease;
+  text-decoration: none;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
 }
 
+/* Hover: ligero relleno */
 .btn-secondary:hover {
-  background: rgba(26,160,216,0.08);
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 0 0 2px #1AA0D8;
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  border-color: #ffffff;
+}
+
+/* Click */
+.btn-secondary:active {
+  transform: translateY(1px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* ================= SERVICES ================= */
