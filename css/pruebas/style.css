@@ -373,3 +373,181 @@ body {
     transform: translateY(0);
   }
 }
+
+/* ====== WHY US: mismo estilo que servicios ====== */
+
+.why-item h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.why-item h3::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 2px;
+  background: #1AA0D8;
+  margin: 10px auto 0;
+}
+
+.why-item p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* ====== WHY US: mismo hover que servicios ====== */
+
+.why-item {
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-item:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 0 2px #1AA0D8,
+    0 16px 36px rgba(0,0,0,0.45);
+}
+
+/* ====== WHY US: título igual que Servicios ====== */
+
+.why-us h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 1.85rem;
+}
+
+/* ================= ASESORÍA ================= */
+
+.assistance {
+  padding: 90px 0;
+}
+
+.assistance h2 {
+  text-align: center;
+  font-size: 1.85rem;
+  margin-bottom: 16px;
+}
+
+.assistance-intro {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 40px;
+  color: #cbd5e1;
+}
+
+.assistance-form {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #161a20;
+  padding: 36px;
+  border-radius: 14px;
+  border: 1px solid #1e2228;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  background: #0d0f12;
+  border: 1px solid #1e2228;
+  border-radius: 6px;
+  color: #ffffff;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #1AA0D8;
+}
+
+/* ===== Página de agradecimiento ===== */
+
+.thank-you {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.thank-you h2 {
+  margin-bottom: 20px;
+}
+
+.thank-you p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+/* ===== Mensaje de éxito formulario ===== */
+
+.assistance-success {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.assistance-success h2 {
+  margin-bottom: 16px;
+}
+
+.assistance-success p {
+  margin-bottom: 28px;
+  color: #cbd5e1;
+}
+
+/* ===== RGPD ===== */
+
+.rgpd {
+  font-size: 0.85rem;
+}
+
+.rgpd-label {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  line-height: 1.5;
+  color: #cbd5e1;
+}
+
+.rgpd-label input {
+  margin-top: 3px;
+}
+
+.rgpd-label a {
+  color: #1AA0D8;
+  text-decoration: underline;
+}
+
+.footer-legal {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.footer-legal a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  text-decoration: underline;
+}
