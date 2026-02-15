@@ -52,7 +52,7 @@ body {
 }
 
 .nav a:hover {
-  color: #cbd5e1;
+  color: #1AA0D8;
 }
 
 .btn-nav {
@@ -77,14 +77,12 @@ body {
   justify-content: center;
 }
 
-/* VIDEO WRAPPER */
 .hero-video-wrapper {
   position: absolute;
   inset: 0;
   z-index: 1;
 }
 
-/* VIDEO */
 .hero-bg {
   width: 100%;
   height: 100%;
@@ -92,7 +90,6 @@ body {
   object-position: center;
 }
 
-/* OSCURECIDO */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -100,7 +97,6 @@ body {
   z-index: 2;
 }
 
-/* DEGRADADO INFERIOR SUAVE */
 .hero-video::after {
   content: "";
   position: absolute;
@@ -112,7 +108,7 @@ body {
   z-index: 2;
 }
 
-/* CONTENIDO HERO */
+/* ================= HERO CONTENT ================= */
 .hero-content {
   position: relative;
   z-index: 3;
@@ -122,6 +118,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeUp 0.9s ease forwards;
 }
 
 .hero-content h1 {
@@ -139,59 +136,55 @@ body {
 }
 
 /* ================= BOTONES ================= */
-.hero-buttons {
-  margin-top: 26px;
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-a, button {
+.btn-primary {
+  display: inline-block;
+  background: #1AA0D8;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  min-width: 170px;
+  text-align: center;
   transition: all 0.25s ease;
 }
 
-/* BOTÓN PRINCIPAL */
-.btn-primary {
-  display: inline-block;
-  background: #f5f5f5;
-  color: #0d0f12;
-  padding: 14px 28px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  min-width: 170px;
-  text-align: center;
-}
-
 .btn-primary:hover {
+  background: #1486B4;
   transform: translateY(-2px);
-  background: #e5e7eb;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  box-shadow:
+    0 0 0 2px #1AA0D8,
+    0 0 18px rgba(26,160,216,0.35);
 }
 
-/* BOTÓN SECUNDARIO */
 .btn-secondary {
   display: inline-block;
   background: transparent;
-  border: 2px solid #3a4452;
-  color: #f5f5f5;
+  border: 2px solid #1AA0D8;
+  color: #1AA0D8;
   padding: 14px 28px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   min-width: 170px;
   text-align: center;
+  transition: all 0.25s ease;
 }
 
 .btn-secondary:hover {
+  background: rgba(26,160,216,0.08);
+  color: #ffffff;
   transform: translateY(-2px);
-  border-color: #cbd5e1;
+  box-shadow:
+    0 0 0 2px #1AA0D8;
 }
 
 /* ================= SERVICES ================= */
 .services {
   padding: 90px 0;
+  opacity: 0;
+  animation: fadeUp 0.9s ease forwards;
+  animation-delay: 0.2s;
 }
 
 .services h2 {
@@ -207,6 +200,7 @@ a, button {
 }
 
 .service-card {
+  position: relative;
   background: #161a20;
   padding: 36px;
   border-radius: 14px;
@@ -215,61 +209,66 @@ a, button {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
-}
-
+/* 🔹 TÍTULO SERVICIO */
 .service-card h3 {
-  font-size: 1.15rem;
-  margin-bottom: 10px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #ffffff;
+  position: relative;
 }
 
+/* 🔹 LÍNEA AZUL CORPORATIVA */
+.service-card h3::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 2px;
+  background: #1AA0D8;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* 🔹 TEXTO SERVICIO */
 .service-card p {
   font-size: 0.95rem;
-  line-height: 1.6;
-  color: #b5b7ba;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-top: 16px;
+}
+
+/* 🔵 HOVER CON CONTORNO AZUL */
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 0 2px #1AA0D8,
+    0 16px 36px rgba(0,0,0,0.45);
+}
+
+.service-card:hover h3 {
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover p {
+  color: #e5e7eb;
+  transition: color 0.3s ease;
 }
 
 /* ================= WHY US ================= */
 .why-us {
   padding: 90px 0;
-}
-
-.why-us h2 {
-  text-align: center;
-  margin-bottom: 50px;
-  font-size: 1.85rem;
-}
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 28px;
+  opacity: 0;
+  animation: fadeUp 0.9s ease forwards;
+  animation-delay: 0.2s;
 }
 
 .why-item {
+  position: relative;
   background: #161a20;
   padding: 36px;
   border-radius: 14px;
   border: 1px solid #1e2228;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.why-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
-}
-
-.why-item h3 {
-  font-size: 1.15rem;
-  margin-bottom: 10px;
-}
-
-.why-item p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #b5b7ba;
 }
 
 /* ================= FOOTER ================= */
@@ -281,98 +280,8 @@ a, button {
   color: #b5b7ba;
 }
 
-/* ================= SEPARACIÓN SUAVE ENTRE SECCIONES ================= */
-section {
-  position: relative;
-}
-
-section:not(.hero-video)::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 1px;
-  background: rgba(255,255,255,0.05);
-}
-
-/* ================= ANIMACIÓN DE ENTRADA ================= */
-
+/* ================= ANIMACIÓN ================= */
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Hero */
-.hero-content {
-  animation: fadeUp 0.9s ease forwards;
-}
-
-/* Secciones */
-.services,
-.why-us {
-  opacity: 0;
-  animation: fadeUp 0.9s ease forwards;
-  animation-delay: 0.2s;
-}
-
-/* ================= DETALLE TECH SUTIL ================= */
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
-  pointer-events: none;
-  z-index: 0;
-}
-
-body > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* ================= GLOW TECNOLÓGICO SUTIL ================= */
-
-.hero-overlay::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 30%, rgba(255,255,255,0.06), transparent 60%);
-  animation: subtleGlow 6s ease-in-out infinite alternate;
-}
-
-@keyframes subtleGlow {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 0.7;
-  }
-}
-
-/* ================= BORDE TECH ELEGANTE ================= */
-
-.service-card::before,
-.why-item::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 14px;
-  border: 1px solid transparent;
-  transition: border-color 0.3s ease;
-  pointer-events: none;
-}
-
-.service-card:hover::before,
-.why-item:hover::before {
-  border-color: rgba(255,255,255,0.15);
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
